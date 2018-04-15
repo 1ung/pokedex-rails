@@ -1,0 +1,54 @@
+<h1>The Chosen One</h1>
+
+<p>
+<strong>No:</strong>
+<%= @pokemons.num %>
+</p>
+
+<p>
+<strong>Name:</strong>
+<%= @pokemons.name %>
+</p>
+
+<p>
+<strong>Img:</strong>
+<img src=<%= @pokemons.img %>>
+</p>
+
+<p>
+<strong>Height:</strong>
+<%= @pokemons.height %>
+</p>
+
+<p>
+<strong>Weight:</strong>
+<%= @pokemons.weight %>
+</p>
+
+<p>
+<strong>Candy:</strong>
+<%= @pokemons.candy %>
+</p>
+
+<p>
+<strong>Candy Count:</strong>
+<%= @pokemons.candy_count %>
+</p>
+
+<p>
+<strong>Egg:</strong>
+<%= @pokemons.egg %>
+</p>
+
+<p>
+<strong>Average Spawns:</strong>
+<%= @pokemons.avg_spawns %>
+</p>
+
+<p>
+<strong>Spawn Time:</strong>
+<%= @pokemons.spawn_time %>
+</p>
+
+<%= link_to 'Back', pokemons_path %>
+<%= link_to 'Edit', edit_pokemon_path(@pokemons) %> 

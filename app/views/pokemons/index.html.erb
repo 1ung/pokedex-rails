@@ -1,0 +1,41 @@
+<h1>Tired of Pokemons</h1>
+
+<%= link_to 'New Pokemon', new_pokemon_path %>
+
+<table>
+<tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Candy</th>
+    <th>Candy Count</th>
+    <th>Egg</th>
+    <th>Average Spawns</th>
+    <th>Spawn Time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+</tr>
+
+<% @pokemons.each do |pokemon| %>
+    <tr>
+<td><%= pokemon.num %></td>
+<td><%= pokemon.name %></td>
+<td><img src=<%= pokemon.img %>></td>
+<td><%= pokemon.height %></td>
+<td><%= pokemon.weight %></td>
+<td><%= pokemon.candy %></td>
+<td><%= pokemon.candy_count %></td>
+<td><%= pokemon.egg %></td>
+<td><%= pokemon.avg_spawns %></td>
+<td><%= pokemon.spawn_time %></td>
+<td><%= link_to 'Show', pokemon_path(pokemon) %></td>
+<td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+<td><%= link_to 'Destroy', pokemon_path(pokemon),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>
+</table> 

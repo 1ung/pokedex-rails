@@ -1,0 +1,18 @@
+<h1>Gotta Catch 'Em All!</h1>
+
+<%= link_to 'New Pokemon', new_pokemons_path %>
+<%= link_to 'My Pokemon', controller: 'pokemons' %>
+
+<table>
+<tr>
+    <th>No</th>
+    <th>Name</th>
+</tr>
+
+<% @pokemons.each do |pokemon| %>
+    <tr>
+    <td><%= pokemon.num %></td>
+    <td><%= pokemon.name %></td>
+    </tr>
+<% end %>
++</table> 

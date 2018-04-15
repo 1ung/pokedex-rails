@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 #clear the table before we seed
 Pokemon.destroy_all
 
@@ -13,7 +12,6 @@ json = ActiveSupport::JSON.decode(File.read('db/pokedex.json'))
 
 json['pokemon'].each do |item|
   new_pokemon = Pokemon.new
-  new_pokemon.id = item['id']
   new_pokemon.num = item['num']
   new_pokemon.name = item['name']
   new_pokemon.img = item['img']
@@ -26,3 +24,4 @@ json['pokemon'].each do |item|
   new_pokemon.spawn_time = item['spawn_time']
   new_pokemon.save
 end
+

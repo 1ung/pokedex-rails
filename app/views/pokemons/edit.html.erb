@@ -1,0 +1,61 @@
+<h1>Edit Pokemon</h1>
+
+<%= form_with(model: @pokemons, local: true) do |f| %>
+
+<p>
+    <%= f.label :num %><br>
+    <%= f.text_field :num %>
+</p>
+
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    <%= f.label :img %><br>
+    <%= f.text_field :img %>
+</p>
+
+<p>
+    <%= f.label :height %><br>
+    <%= f.text_field :height %>
+</p>
+
+<p>
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+</p>
+
+<p>
+    <%= f.label :candy %><br>
+    <%= f.text_field :candy %>
+</p>
+
+<p>
+    <%= f.label :candy_count %><br>
+    <%= f.text_field :candy_count %>
+</p>
+
+<p>
+    <%= f.label :egg %><br>
+    <%= f.text_field :egg %>
+</p>
+
+<p>
+    <%= f.label :avg_spawns %><br>
+    <%= f.text_field :avg_spawns %>
+</p>
+
+<p>
+    <%= f.label :spawn_time %><br>
+    <%= f.text_field :spawn_time %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+
+<% end %>
+
+<%= link_to 'Back', pokemons_path %> 
